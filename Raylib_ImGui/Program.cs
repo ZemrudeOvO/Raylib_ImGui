@@ -1,6 +1,6 @@
-﻿using Raylib_cs;
+﻿using System;
+using Raylib_cs;
 using ImGuiNET;
-using StoryCreator;
 
 namespace GUI
 { 
@@ -25,10 +25,7 @@ namespace GUI
                 Raylib.BeginDrawing();
                 Raylib.ClearBackground(Color.DARKGRAY);
 
-                if (ImGui.Button("Click me!"))
-                {
-                    Console.WriteLine("button clicked.");
-		        }
+                Layout.Display();
 
                 ImGui.Render();
                 controller.Render(ImGui.GetDrawData());
